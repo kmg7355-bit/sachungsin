@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>사충신, 김해성을 지키다</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#faf6ee;--card:#fff;--ink:#2b2118;--mut:#6f6254;--ac:#8c2f1b;--ac2:#c9a24a;--line:#e3d9c6}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d1812;--card:#2a231a;--ink:#f1e8d8;--mut:#b5a78f;--ac:#e08a6c;--ac2:#c9a24a;--line:#443a2b}}
+:root[data-theme="dark"]{--bg:#1d1812;--card:#2a231a;--ink:#f1e8d8;--mut:#b5a78f;--ac:#e08a6c;--ac2:#c9a24a;--line:#443a2b}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Serif KR","Malgun Gothic",serif;line-height:1.7}
+header{background:var(--ac);color:#fff;padding:22px 16px;text-align:center}
+header h1{margin:0;font-size:1.5rem}.info{margin-top:12px;display:flex;gap:6px;align-items:center;justify-content:center;flex-wrap:wrap}.info input{background:#fff;color:#2b2118;border:0;padding:5px 8px}.info .sm{width:54px;text-align:center}.info .mem{display:flex;align-items:center;gap:6px;flex:1 1 260px;max-width:420px}.info .mem input{width:100%}
+header p{margin:6px 0 0;opacity:.9;font-size:.95rem}
+nav{display:flex;gap:4px;justify-content:center;flex-wrap:wrap;padding:10px;background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+nav button{font:inherit;border:1px solid var(--line);background:none;color:var(--ink);padding:8px 14px;border-radius:20px;cursor:pointer}
+nav button.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+main{max-width:860px;margin:0 auto;padding:16px}
+section{display:none}section.on{display:block}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:12px 0}
+h2{color:var(--ac);margin:.2em 0 .4em}h3{margin:.2em 0}
+.tl{border-left:3px solid var(--ac2);padding-left:14px}.tl div{margin:10px 0}.tl b{color:var(--ac)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+.fig{text-align:center}.fig .han{font-size:1.6rem;color:var(--ac)}.fig small{color:var(--mut)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px}.grid2 .card{margin:0}.grid2 .fig{text-align:left}.grid2 .fig .han{text-align:center}.grid2 p{font-size:.95rem;margin:.4em 0 0}
+.note{font-size:.85rem;color:var(--mut)}
+button.pri{font:inherit;background:var(--ac);color:#fff;border:0;padding:9px 18px;border-radius:8px;cursor:pointer}
+button.sec{font:inherit;background:none;color:var(--ink);border:1px solid var(--line);padding:8px 14px;border-radius:8px;cursor:pointer}
+.opt{display:block;width:100%;text-align:left;font:inherit;color:var(--ink);background:none;border:1px solid var(--line);border-radius:8px;padding:9px 12px;margin:6px 0;cursor:pointer}
+.opt:disabled{cursor:default}.opt.ok{background:#2e7d3233;border-color:#2e7d32}.opt.no{background:#c6282833;border-color:#c62828}
+.exp{margin-top:8px;padding:8px 12px;border-left:3px solid var(--ac2);color:var(--mut)}
+label{display:block;font-size:.9rem;color:var(--mut);margin-top:8px}
+input,select,textarea{font:inherit;width:100%;padding:8px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:560px){.row{grid-template-columns:1fr}}
+.roles label{display:inline-block;margin:4px 10px 0 0;color:var(--ink)}.roles input{width:auto}
+canvas{width:100%;max-width:100%;height:auto;border:1px dashed var(--ac2);border-radius:8px;background:#fff;touch-action:none}
+.tools{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin:6px 0}
+.tools input[type=color]{width:40px;padding:0;height:34px}.tools input[type=range]{width:110px}
+details.ex{margin:8px 0;font-size:.92rem}details.ex summary{cursor:pointer;color:var(--ac)}.stat{display:grid;grid-template-columns:90px 1fr 36px;gap:8px;align-items:center;margin:6px 0}
+.stat input[type=text]{padding:4px 6px}.stat input[type=range]{padding:0}
+.must{color:var(--ac);font-size:.85rem}
+.score{font-size:1.3rem;color:var(--ac);text-align:center}
+@media print{header{background:#fff;color:#000;padding:6px}.info input{border-bottom:1px solid #000}header p,nav,.noprint{display:none}body{background:#fff;color:#000}section{display:none!important}#design{display:block!important}}
+</style></head><body>
+<header><h1>〈사충신, 김해성을 지키다〉</h1><p>임진왜란 김해성 전투 심화 학습</p>
+<div class="info">3학년 <input id="cls" class="sm" inputmode="numeric" aria-label="반"> 반 <input id="grp" class="sm" inputmode="numeric" aria-label="모둠"> 모둠 <span class="mem">모둠원 <input id="members" placeholder="이름을 모두 적어 주세요"></span></div></header>
+<nav id="nav"></nav>
+<main>
+
+<section id="learn" class="on">
+<div class="card"><h2>사충신이 무엇인가요?</h2>
+<p>1592년, 일본은 ‘명을 정벌하러 가는 데 길을 빌려달라.’라는 구실로 조선을 침략하였습니다(임진왜란). 일본군은 부산진성과 동래성을 차례로 함락시킨 뒤 곧 김해까지 진격해 왔습니다. 김해성을 지키던 관군의 장수들은 처음에는 맞서 싸웠으나, 전세가 불리해지자 성을 버리고 도망쳐 버렸습니다.</p>
+<p>하지만 김해 사람들은 포기하지 않았습니다. <b>송빈, 이대형, 김득기, 류식</b>이라는 네 명의 의병대장이 남은 군사와 백성들을 이끌고 김해성이 함락될 때까지 끝까지 싸웠습니다. 이들은 모두 전투 중 장렬히 전사했고, 그들의 용기와 희생은 지금까지도 충절의 상징으로 기억되고 있습니다. 이에 그들을 네 명의 충성스러운 신하라는 의미의 ‘사충신’이라고 부릅니다. 이 네 사람은 임진왜란 때 최초로 일어난 의병이라고 할 수 있습니다.</p>
+</div>
+
+<div class="card"><h2>사충신은 누구인가요?</h2>
+<div class="grid2">
+<div class="card fig"><h3>송빈 (1542~1592)</h3><p>진영읍 하계리에서 태어났습니다. 임진왜란 당시 이미 나이가 50세였으나, 일본군에 맞서 김해성을 지키고자 했습니다. 소매를 붙잡고 따라오는 아들을 뿌리치고, 장남에게 집안을 부탁한 뒤 김해성으로 들어갔습니다. 송빈은 일본군의 공격에 끝까지 저항했으나, 싸울 힘이 다하자 서상동의 큰 바위 위에 올라가 시 한 수를 남기고 임금이 있는 북쪽을 향해 절한 뒤 장렬히 전사한 것으로 전해집니다.</p></div>
+<div class="card fig"><h3>이대형 (1543~1592)</h3><p>활천리에서 태어났습니다. 임진왜란이 일어나자 함께 싸우겠다며 따라나선 두 아들에게 집안을 부탁하고, 김해성 남문을 지키며 끝까지 싸웠습니다. 그의 아들은 아버지의 시신을 찾다가 일본군에게 희생되었고, 조카딸은 일본군에 맞서 절개를 지키려다 목숨을 잃었습니다. 나라에서는 국가에 충성을 다하고, 부모에게 효를 실천하며, 적 앞에서 절개를 지킨 이 세 사람의 공을 함께 기려 표창하였습니다.</p></div>
+<div class="card fig"><h3>김득기 (1549~1592)</h3><p>거인리(현 외동)에서 태어났습니다. 그는 무과에 급제하여 벼슬하다 고향에서 지내는 중 임진왜란을 맞았습니다. 김해성을 지키기 위해 나서자 아들이 옷자락을 붙잡고 그를 만류하였습니다. 이때 그는 평소 입던 도포 한 벌과 머리카락 한 줌을 잘라 건넸습니다. 이는 자신이 전사해 시신을 찾지 못할 경우 이를 대신 묻어달라는 의미였습니다. 이후 김해성 동문을 맡아 지키다가 성이 함락될 때 순절하였습니다.</p></div>
+<div class="card fig"><h3>류식 (1552~1592)</h3><p>대동면 예안리에서 태어났습니다. 임진왜란 때 집안사람들과 노비를 이끌고 김해성에 들어가 항전하였습니다. 일본군이 호계천 상류를 막아 성 안에 물이 끊기자 사람들은 갈증에 시달렸고, 일부는 항복을 주장하기도 했습니다. 류식은 이를 꾸짖고 직접 물길을 찾기 위해 땅을 팠고, 그 자리에서 샘물이 솟아올랐습니다. 그는 끝까지 일본군에 맞서 싸우다 장렬히 전사했습니다.</p></div>
+</div></div>
+
+<div class="card"><h2>사충신과 관련된 흔적은 무엇이 있나요?</h2>
+<label>내가 찾은 답<textarea id="trace" rows="3" placeholder="정답을 적어 보세요."></textarea></label>
+<p><button class="sec" id="ansBtn">정답 확인</button></p>
+<div id="ans" class="exp" hidden><b>김해읍성, 사충단, 송공순절암</b><br>· 김해읍성: 사충신이 일본군에 맞서 끝까지 싸운 김해성입니다.<br>· 사충단: 네 사람의 공을 기리기 위해 고종의 명으로 1871년에 세운 제단이며, 매년 음력 4월 20일에 추모제를 지냅니다.<br>· 송공순절암: 김해 서상동의 지석묘(고인돌)입니다. 송빈의 마지막 이야기와 이어서 생각해 보세요.</div></div>
+
+<div class="card"><h2>생각해 봅시다</h2>
+<label>Q. 왜 사충신은 도망가지 않고 끝까지 싸우려 했다고 생각하나요?<textarea id="think" rows="4"></textarea></label>
+<label>Q. 사충신에게서 우리가 지금 배울 수 있는 것은 무엇이라고 생각하나요?<textarea id="think2" rows="4"></textarea></label>
+<p class="note" id="lmsg">작성한 내용은 이 기기의 브라우저에 자동 저장됩니다.</p></div>
+</section>
+
+<section id="quiz"><div id="qbox"></div></section>
+
+<section id="design">
+<div class="card"><h2>게임 캐릭터 디자인하기</h2>
+<p>1592년 일본이 김해에 쳐들어왔을 때, 사충신은 끝까지 김해성을 지켰습니다. 그들의 활동을 기억하고자, 우리는 가상의 역사 게임 〈사충신, 김해성을 지키다〉의 캐릭터 디자이너가 되어 보려고 합니다. 김해 사충신 중 한 사람의 이야기를 바탕으로, 게임 속 캐릭터를 만들어 보세요!</p>
+<label>선정한 역사적 인물<select id="who"><option value="">선택하세요</option><option>송빈</option><option>이대형</option><option>김득기</option><option>류식</option></select></label>
+<label>역할</label><div class="roles" id="roles"></div>
+<details class="card ex"><summary>예시 보기 (스킬 · 대표 한 마디)</summary><p><b>스킬 예시</b><br>· <b>샘물 솟는 자리</b>: 땅을 파서 샘물을 찾아 아군의 체력을 회복시킨다. <span class="note">(근거: 류식이 물이 끊기자 직접 땅을 파 샘물을 찾았다)</span><br>· <b>남문 수비</b>: 일정 시간 동안 받는 피해를 크게 줄인다. <span class="note">(근거: 이대형이 김해성 남문을 지키며 끝까지 싸웠다)</span><br>· <b>마지막 시 한 수</b>: 쓰러지기 직전, 주변 아군의 공격력을 높인다. <span class="note">(근거: 송빈이 시 한 수를 남기고 북쪽을 향해 절한 뒤 전사한 것으로 전해진다)</span></p><p><b>대표 한 마디 예시</b><br>· “이 성은 우리가 지킨다. 한 걸음도 물러서지 않겠다!”<br>· “내 몸이 사라져도, 이 마음은 이 성에 남을 것이다.”<br><span class="note">※ 위 예시는 수업용 창작 문장입니다. 우리 모둠은 인물의 행동을 근거로 직접 만들어 보세요.</span></p></details>
+<label>전용 스킬 (설명)</label><div id="skills"></div>
+<label>배경 · 대표 한 마디<input id="quote" placeholder="예: “이 성은 우리가 지킨다!”"></label></div>
+
+<div class="card"><h3>캐릭터 그리기</h3>
+<div class="tools noprint"><input type="color" id="pc" value="#8c2f1b"><input type="range" id="pw" min="1" max="20" value="4"><button class="sec" id="eraser">지우개</button><button class="sec" id="clr">전체 지우기</button></div>
+<canvas id="cv" width="640" height="420"></canvas></div>
+
+<div class="card"><h3>캐릭터 능력치</h3><div id="stats"></div><p class="note">막대를 움직여 0~100 사이로 표시해 보세요.</p></div>
+
+<div class="card"><h3>우리 모둠의 캐릭터 설명하기</h3>
+<p class="must">* 필수 조건: 어떤 역사적 근거로 캐릭터를 설정했는지 작성할 것</p>
+<textarea id="expl" rows="7" placeholder="제작 의도, 인물 선정 이유, 특징 등"></textarea>
+<div class="noprint" style="margin-top:10px"><button class="pri" id="save">저장</button> <button class="sec" onclick="window.print()">인쇄</button> <span id="msg" class="note"></span></div></div>
+</section>
+</main>
+
+<script>
+const $=s=>document.querySelector(s);
+const TABS=[["learn","배우기"],["quiz","퀴즈"],["design","캐릭터 디자인"]];
+TABS.forEach(([id,t],i)=>{const b=document.createElement("button");b.textContent=t;b.onclick=()=>go(id);b.dataset.id=id;$("#nav").append(b)});
+function go(id){document.querySelectorAll("section").forEach(s=>s.classList.toggle("on",s.id===id));document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("on",b.dataset.id===id));if(location.hash!=="#"+id)location.hash=id;}
+addEventListener("hashchange",()=>{const h=location.hash.slice(1);if(TABS.some(t=>t[0]===h))go(h)});
+go(TABS.some(t=>t[0]===location.hash.slice(1))?location.hash.slice(1):"learn");
+
+/* Quiz */
+const Q=[
+["류식이 성 안의 물이 끊겼을 때 한 일은?",["성문을 열었다","직접 땅을 파 물길을 찾았다","항복을 권했다","성을 빠져나갔다"],1,"일본군이 물길을 막자 류식은 항복을 주장하는 이들을 꾸짖고 땅을 파 샘물을 찾았다고 전해집니다."],
+["김해성 전투가 일어난 해는?",["1592년","1597년","1600년","1871년"],0,"임진왜란은 1592년에 시작되었고, 김해성 전투는 같은 해 4월에 벌어졌습니다."],
+["1592년 일본이 조선을 침략하며 내세운 구실은?",["명을 정벌하러 가는 데 길을 빌려달라","조선의 왕위 계승 문제","무역 항구를 열어 달라","국경 분쟁 해결"],0,"일본은 ‘명을 정벌하러 가는 데 길을 빌려달라’는 구실로 조선을 침략하였습니다."],
+["김해성 전투에서 싸운 사충신이 아닌 사람은?",["송빈","이대형","곽재우","류식"],2,"사충신은 송빈, 이대형, 김득기, 류식입니다. 곽재우는 다른 지역에서 활약한 의병장입니다."],
+["관군 장수들이 도망친 뒤 김해성에 남아 끝까지 싸운 사람들은?",["수군 장수","네 명의 의병대장","명나라 장수","중앙의 대신"],1,"송빈, 이대형, 김득기, 류식 네 의병대장이 남은 군사와 백성을 이끌고 끝까지 싸웠습니다."],
+["사충단은 어느 임금의 명으로 언제 세워졌나요?",["선조, 1592년","숙종, 1716년","고종, 1871년","정조, 1784년"],2,"고종의 명으로 1871년에 사충단이 건립되었습니다."],
+["사충신을 기리는 추모제는 언제 지내나요?",["매년 음력 4월 20일","매년 양력 1월 1일","매년 음력 8월 15일","매년 양력 6월 6일"],0,"김해성 전투가 벌어진 시기에 맞추어 음력 4월 20일에 추모제를 지냅니다."],
+["전쟁이 끝난 뒤 조정이 사충신에게 내린 조치는?",["귀양 보냄","관직을 높여 줌(추증)","토지를 몰수함","아무 조치도 없었음"],1,"1600년에 가선대부로 추증하였습니다. 추증은 죽은 뒤에 관직을 내리는 것입니다."]];
+let qi=0,sc=0,done=false,first=true;
+function showQ(){const b=$("#qbox");if(qi>=Q.length){b.innerHTML=`<div class="card"><h2>결과</h2><div class="score">${sc} / ${Q.length}</div><p style="text-align:center">${sc>=5?"훌륭해요! 사충신을 잘 기억하겠네요.":"‘배우기’ 탭을 한 번 더 읽고 다시 도전해 보세요."}</p><p style="text-align:center"><button class="pri" id="rt">다시 풀기</button></p></div>`;$("#rt").onclick=()=>{qi=0;sc=0;showQ()};return}
+const q=Q[qi];done=false;first=true;b.innerHTML=`<div class="card"><p class="note">문제 ${qi+1} / ${Q.length}</p><h3>${q[0]}</h3>${q[1].map((o,i)=>`<button class="opt" data-i="${i}">${o}</button>`).join("")}<div id="fb"></div></div>`;
+b.querySelectorAll(".opt").forEach(el=>el.onclick=()=>{if(done||el.disabled)return;const i=+el.dataset.i;if(i!==q[2]){first=false;el.classList.add("no");el.disabled=true;$("#fb").innerHTML='<div class="exp">아쉬워요. 다시 한 번 생각해서 정답을 골라 보세요!</div>';return}
+done=true;if(first)sc++;el.classList.add("ok");b.querySelectorAll(".opt").forEach(o=>o.disabled=true);$("#fb").innerHTML=`<div class="exp">${first?"정답입니다! ":"정답을 찾았어요! "}${q[3]}</div><p><button class="pri" id="nx">${qi+1<Q.length?"다음 문제":"결과 보기"}</button></p>`;$("#nx").onclick=()=>{qi++;showQ()}})}
+showQ();
+
+/* Design form */
+["딜러(공격형)","탱커(방어형)","서포터(보조형)","컨트롤러(전략가형)"].forEach(r=>$("#roles").insertAdjacentHTML("beforeend",`<label><input type="radio" name="role" value="${r}"> ${r}</label>`));
+for(let i=0;i<2;i++)$("#skills").insertAdjacentHTML("beforeend",`<div class="row" style="margin-top:6px"><input class="sk" placeholder="스킬 이름 (예: 샘물 솟는 자리)"><input class="sd" placeholder="설명 (예: 아군의 체력을 회복시킨다)"></div>`);
+const ST=["체력","공격력","방어력","지력","리더십","",""];
+ST.forEach((n,i)=>$("#stats").insertAdjacentHTML("beforeend",`<div class="stat"><input type="text" class="sn" value="${n}" placeholder="직접 입력"><input type="range" class="sv" min="0" max="100" step="10" value="0"><b class="so">0</b></div>`));
+document.querySelectorAll(".sv").forEach(r=>r.oninput=()=>r.nextElementSibling.textContent=r.value);
+
+/* Canvas */
+const cv=$("#cv"),cx=cv.getContext("2d");cx.fillStyle="#fff";cx.fillRect(0,0,cv.width,cv.height);
+let draw=false,er=false;
+const pos=e=>{const r=cv.getBoundingClientRect();return[(e.clientX-r.left)*cv.width/r.width,(e.clientY-r.top)*cv.height/r.height]};
+cv.onpointerdown=e=>{draw=true;cv.setPointerCapture(e.pointerId);const[x,y]=pos(e);cx.beginPath();cx.moveTo(x,y)};
+cv.onpointermove=e=>{if(!draw)return;const[x,y]=pos(e);cx.lineWidth=+$("#pw").value;cx.lineCap="round";cx.strokeStyle=er?"#fff":$("#pc").value;cx.lineTo(x,y);cx.stroke()};
+cv.onpointerup=()=>draw=false;
+$("#eraser").onclick=e=>{er=!er;e.target.textContent=er?"펜으로":"지우개"};
+$("#clr").onclick=()=>{cx.fillStyle="#fff";cx.fillRect(0,0,cv.width,cv.height)};
+
+/* Save/load */
+function collect(){return{who:$("#who").value,role:(document.querySelector("[name=role]:checked")||{}).value||"",sk:[...document.querySelectorAll(".sk")].map(x=>x.value),sd:[...document.querySelectorAll(".sd")].map(x=>x.value),quote:$("#quote").value,sn:[...document.querySelectorAll(".sn")].map(x=>x.value),sv:[...document.querySelectorAll(".sv")].map(x=>x.value),expl:$("#expl").value}}
+$("#save").onclick=()=>{try{const d=collect();d.img=cv.toDataURL("image/png");localStorage.setItem("sachung",JSON.stringify(d));$("#msg").textContent="이 기기의 브라우저에 저장했어요."}catch(e){$("#msg").textContent="저장하지 못했어요. 인쇄 기능을 이용해 주세요."}};
+try{const d=JSON.parse(localStorage.getItem("sachung")||"null");if(d){$("#who").value=d.who;if(d.role){const r=document.querySelector(`[name=role][value="${d.role}"]`);if(r)r.checked=true}
+document.querySelectorAll(".sk").forEach((x,i)=>x.value=d.sk[i]||"");document.querySelectorAll(".sd").forEach((x,i)=>x.value=d.sd[i]||"");$("#quote").value=d.quote;
+document.querySelectorAll(".sn").forEach((x,i)=>x.value=d.sn[i]||"");document.querySelectorAll(".sv").forEach((x,i)=>{x.value=d.sv[i]||0;x.nextElementSibling.textContent=x.value});$("#expl").value=d.expl;
+if(d.img){const im=new Image();im.onload=()=>cx.drawImage(im,0,0);im.src=d.img}}}catch(e){}
+
+try{const k="sachung_learn";const ids=["trace","think","think2"];const d=JSON.parse(localStorage.getItem(k)||"{}");ids.forEach(i=>{$("#"+i).value=d[i]||"";$("#"+i).addEventListener("input",()=>{try{const o={};ids.forEach(j=>o[j]=$("#"+j).value);localStorage.setItem(k,JSON.stringify(o))}catch(e){}})})}catch(e){}
+$("#ansBtn").onclick=()=>{$("#ans").hidden=false};
+
+try{const k="sachung_info",ids=["cls","grp","members"],d=JSON.parse(localStorage.getItem(k)||"{}");ids.forEach(i=>{$("#"+i).value=d[i]||"";$("#"+i).addEventListener("input",()=>{try{const o={};ids.forEach(j=>o[j]=$("#"+j).value);localStorage.setItem(k,JSON.stringify(o))}catch(e){}})})}catch(e){}
+</script></body></html>
